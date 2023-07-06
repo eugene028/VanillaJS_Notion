@@ -21,6 +21,7 @@ export default function App ($target) {
     this.render = () => {
         documentPage.render();
         const { pathname } = window.location;
+        console.log(pathname)
         const [, , documentId] = pathname.split('/');
         if(documentId){
             editorPage.setState({...editorPage.state, id: documentId})
